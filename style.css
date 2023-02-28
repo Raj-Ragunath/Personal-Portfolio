@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto&display=swap');
+
+
+/* Main Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+   
+  }
+
+  @media (min-width: 500px){
+    body{
+        grid-template-columns: 1fr 4fr;
+    }
+  }
+  
+  header {
+    grid-column: 1/3;
+    background-color: #add790;
+    text-align: center;
+  }
+  
+  .content {
+    overflow-y: auto;
+    padding: 1em;
+  }
+  
+
+
+.side{
+    background-color: red;
+    width: 100%;
+}
+
+
+/* Navigation Sidebar */
+
+
+/* .sidebar{
+    width: 100%;
+    float: left;
+    top: 0;
+    left: 0;
+    position: sticky;
+    
+} */
+
+.sidebar-image{
+    width: 100%;
+    padding: 1em;
+    border-radius: 50%;
+}
+
+@media (max-width: 500px){
+    .side{
+        height: 10vh;
+    }
+
+    .sidebar{
+        padding: 0;
+        display: flex;
+        flex-direction: row;    
+        align-items: center;
+    }
+
+    .sidebar-image{
+        width: 15vw;
+        aspect-ratio: 1;
+        order: 1;
+    }
+
+    .sidebar-name,
+    .sidebar-role{
+        font-size: 1rem;
+    }
+    .sidebar-top-left{
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebar-name-role{
+        order: 2;
+    }
+
+    .sidebar-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar-nav-links{
+        position: fixed;
+        margin-top: 10vh;
+        height: 90vh;
+        background: blue;
+        inset: 0 0 0 30vw;
+        justify-content: flex-end;
+        z-index: 9999;
+        color: green;
+        list-style: none;
+        transform: translateX(100%);
+        transition: transform 350ms ease-in;
+    }
+
+    .sidebar-nav-links[data-visible="true"]{
+        transform: translateX(0);
+    }
+
+    .sidebar-nav-links a{
+        display: inline-block;
+        justify-content: end;
+        color: white;
+        text-decoration: none;
+        padding: 1.5rem;
+    }
+
+    .mobile-button{
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        top: 2rem;
+        right: 2rem;
+        width: 1rem;
+        aspect-ratio: 1;
+    }
+
+    .home{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-greeting-heading{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+        line-height: 4rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-main-nav{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .home-nav-link{
+        display: inline-block;
+        width: 7.5rem;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid black;
+        margin-bottom: 1em;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+
+    }
+
+    .about{
+        height: 100vh;
+    }
+
+    .about-image{
+        width: 5rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    .about-skills-section{
+       
+    }
+
+    .about-skills-sections{
+        list-style: none;
+    }
+
+    .about-text{
+    }
+
+    .about-frontend-skills,
+    .about-backend-skills,
+    .about-development-tools{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .experience{
+        height: 100vh;
+    }
+
+    .project{
+        height: 100vh;
+    }
+
+    .contact{
+        height: 100vh;
+    }
+}

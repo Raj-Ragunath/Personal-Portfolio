@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <div class="side">
+        <div class="sidebar">
+            <div class="sidebar-top-left">
+                <div class="sidebar-name-role">
+                    <h1 class="sidebar-name">Raj Ragunath</h1>
+                    <h2 class="sidebar-role">Full Stack Software Engineer</h2>
+                </div>
+                    <img src="images/ProfilePicture.jpeg" alt="Profile picture" class="sidebar-image">    
+            </div>
+
+            <button class="mobile-button"></button>
+            
+            <nav class="sidebar-nav">
+                <ul class="sidebar-nav-links" data-visible="false">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                    <div class="sidebar-socials">
+                        <a href="#">Github</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </ul>
+                
+            </nav>
+        </div>
+    </div>
+    <div class="content">
+        <section id="home" class="home" class="home-container">
+            <div >
+                <div class="home-greeting-heading">
+                    <h1 class="home-greeting">Hi, I'm <span>Raj</span>.</h1>
+                    <h2 class="home-greeting-role">I'm a <span> Full Stack Software Engineer</span>. </h2>        
+                </div>
+                
+                <nav>
+                    <ul class="home-main-nav">
+                        <li><a href="#about" class="home-nav-link btn">About</a></li>
+                        <li><a href="#experience" class="home-nav-link btn">Experience</a></li>
+                        <li><a href="#projects" class="home-nav-link btn">Projects</a></li>
+                        <li><a href="#" class="home-nav-link btn">Resume</a></li>
+                        <li><a href="#contact" class="home-nav-link btn">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    
+        <section id="about" class="about" >
+            <h2 class="about-title">About Me</h2>
+            <div class="about-container">
+                <div >
+                    <img src="images/ProfilePicture.jpeg" alt="" class="about-image">
+                </div>
+                <div class="about-content">
+                    <h3 class="about-heading">My Professional Background</h3>
+                <div class="about-text">
+                    <p>Hello! My name is Raj, and I'm a full stack software engineer with a passion for creating functional responsive full stack web applications. </p>
+                    <br>
+                    <p>Originally trained electrical engineering, I began my profession career as an Electrical Design Engineer in the construction industry, and quickly transitioned over to a software development role as i'd identified niches within the engineering design process which could be automated and improved by leveraging custom software tools. </p>
+                    <br>
+                    <p>These days, i'm working as a Software Engineer at DIALOG on the Internal Tools team, following an agile software development process to build internal tools in hopes of increasing engineering efficiency, introducing automation into the traditional engineering design process, and ultimately increasing revenue while giving DIALOG a technical competitve edge when competing with neighboring engineering firms. </p>
+                </div>
+                <h3 class="about-heading">My Skills</h3>
+                <p>Our my tenure as a Full Stack Software Engineer, as well as during my free time, i've acquired the following skills and am able to utilize these skills to build full stack web applications. </p>
+                <div class="about-skills-section">
+                    <div>
+                        <ul class="about-skills-sections">
+                            <li>Frontend Development</li>
+                            <div class="about-frontend-skills">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>React.js</li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="about-skills-sections">
+                            <li>Backend Development</li>
+                            <div class="about-backend-skills">                            
+                                <li>Node.js</li>
+                                <li>Express.js</li>
+                                <li>Java</li>
+                                <li>Spring Boot</li>
+                                <li>PostgreSQL</li>
+                                <li>MongoDB</li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="about-skills-sections">
+                            <li>Development Tools</li>
+                            <div class="about-development-tools">
+                                <li>Visual Studio Code</li>
+                                <li>Git</li>
+                                <li>Chrome Developer Tools</li>
+                                <li>Postman</li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <p>Interested in seeing what i've buily with these tools and technologies? <a href="" class="btn">View My Projects</a></p>
+    
+                </div>
+            </div>
+         </section>
+
+         <section id = "experience" class="experience">
+            <h2 class="experience-title">
+                My Professional Experiences
+            </h2>
+
+         </section>
+         <section id="projects" class="projects">
+            <h2 class="projects-title">
+
+            </h2>
+            <div class="grid-container">
+                <div>
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <div>
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <div>
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <div>
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <div>
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <div>
+                    <h3></h3>
+                </div>
+            </div>
+         </section>
+
+         <section id="contact" class="contact"></section>
+    </div>
+
+    <script>
+        const navButtom = document.querySelector('.mobile-button');
+        const primaryNav = document.querySelector('.sidebar-nav-links');
+
+        navButtom.addEventListener('click', ()=>{
+            const visibility = primaryNav.getAttribute('data-visible');
+
+            if(visibility === "false"){
+                primaryNav.setAttribute('data-visible', "true");
+            } else {
+                primaryNav.setAttribute('data-visible', "false");
+            }
+        })
+    </script>
+
+</body>
+</html>
